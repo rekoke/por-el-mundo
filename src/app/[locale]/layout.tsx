@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { PostHogProvider } from '@/components/analytics/PostHogProvider';
-import { DemoBadge } from '@/components/DemoBadge';
 import { routing } from '@/libs/i18nNavigation';
-import { NextIntlClientProvider } from 'next-intl';
+import { NextIntlClientProvider, NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import '@/styles/global.css';
@@ -64,7 +63,6 @@ export default async function RootLayout(props: {
           <PostHogProvider>
             {props.children}
           </PostHogProvider>
-          <DemoBadge />
         </NextIntlClientProvider>
       </body>
     </html>
